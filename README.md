@@ -155,7 +155,9 @@ INSERT INTO Salesman1 (salesman_id, name, city, commission) VALUES(5003, 'Lauson
 ### Q7) Write a SQL query to find the salesperson and customer who reside in the same city. Return Salesman, cust_name and city.
 
 ### QUERY:
+```sql
 select s.name,c.cust_name,s.city from salesman1 s ,customer1 c where s.city=c.city;
+```
 
 ### OUTPUT:
 ![7](https://github.com/Janarthanan2/EX-3-SubQueries-Views-and-Joins/assets/119393515/965d548a-4aad-4551-9f20-310d2e92e4ee)
@@ -165,7 +167,9 @@ select s.name,c.cust_name,s.city from salesman1 s ,customer1 c where s.city=c.ci
 
 
 ### QUERY:
+```sql
 select s.name,c.cust_name,c.city,s.commission from salesman1 s inner join customer1 c on s.city=c.city where s.commission>0.13;
+```
 
 ### OUTPUT:
 ![8](https://github.com/Janarthanan2/EX-3-SubQueries-Views-and-Joins/assets/119393515/67797615-7e75-4406-9cbb-74e8b03b1936)
@@ -174,8 +178,9 @@ select s.name,c.cust_name,c.city,s.commission from salesman1 s inner join custom
 ### Q9) Perform Natural join on both tables
 
 ### QUERY:
+```sql
 select * from salesman1 s natural join customer1 c;
-
+```
 
 ### OUTPUT:
 ![9](https://github.com/Janarthanan2/EX-3-SubQueries-Views-and-Joins/assets/119393515/d6bbb39c-45a4-45eb-963c-e3fa17bcaf88)
@@ -183,8 +188,10 @@ select * from salesman1 s natural join customer1 c;
 ### Q10) Perform Left and right join on both tables
 
 ### QUERY:
+```sql
 select s.name,c.cust_name,c.city,s.commission from salesman1 s left join customer1 c on s.salesman_id=c.salesman_id;
 select s.name,c.cust_name,c.city,s.commission from salesman1 s right join customer1 c on s.salesman_id=c.salesman_id;
+```
 
 ### OUTPUT:
 #### LEFT JOIN
